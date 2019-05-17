@@ -53,10 +53,16 @@
 	</dependencies>
         <distributionManagement>
           <snapshotRepository>
-            <id>nexus</id>
-               <name>localhost.localdomain-snapshots</name>
+                   <id>snapshots</id>
+                    <name>localhost.localdomain-snapshots</name>
                     <url>http://192.168.60.11:8081/repository/maven-snapshots/</url>
           </snapshotRepository>
+          <repository>
+                    <id>releases</id>
+                    <name>localhost.localdomain-release</name>
+                    <url>http://192.168.60.11:8081/repository/maven-releases/</url>
+          </repository>
+
        </distributionManagement>
 
 	<build>
