@@ -14,4 +14,14 @@
       <password>admin123</password>
    </server>
 </servers>
+      
+<mirrors>
+    <mirror>
+      <id>snapshots</id>
+      <name>central</name>
+      <mirrorOf>*</mirrorOf>
+      <url>http://192.168.60.11:8081/repository/maven-central</url>
+    </mirror>
+</mirrors>
+
 </settings>
