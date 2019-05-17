@@ -1,4 +1,3 @@
-
 pipeline {
     agent {
         label 'slave1'
@@ -17,14 +16,32 @@ pipeline {
                 git branch: 'feature/marwa', credentialsId: 'd5a15dd5-35d4-43ed-8f47-453a739856c6', url: 'https://github.com/Marwa8888/PROJETCD.git'
             }
         }
-   
-    
-
-        stage ('Build') {
+        stage('test'){
+         parallel{
+            stage('junit'){
+             tools{
+               maven "maven3"
+              }
+                  steps{
+                        sh"mvn test"
+            }
+      }
+            stage('pmd'){
+              steps{
+               sh "mvn pmd:pmd"
+            }
+           }
+             
+         }
+            
+        }
+        stage ('Deployer sur nexus') {
             steps {
-                sh 'mvn deploy'
+                sh 'mvn deploy -s settings.xml'
             }
         }
         
 }
 }
+
+
