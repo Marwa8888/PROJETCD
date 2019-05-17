@@ -1,4 +1,4 @@
-/home/vagrant/Projet-CD/Projet-CD-CI/src/main/java/com/wunderit/projetcd/controller/LoginController.java
-/home/vagrant/Projet-CD/Projet-CD-CI/src/main/java/com/wunderit/projetcd/MyMath.java
-/home/vagrant/Projet-CD/Projet-CD-CI/src/main/java/com/wunderit/projetcd/mongodriver/Driver.java
-/home/vagrant/Projet-CD/Projet-CD-CI/src/main/java/com/wunderit/projetcd/ProjetcdApplication.java
+/home/vagrant/Projet-CD-CI/src/main/java/com/wunderit/projetcd/ProjetcdApplication.java
+/home/vagrant/Projet-CD-CI/src/main/java/com/wunderit/projetcd/controller/LoginController.java
+/home/vagrant/Projet-CD-CI/src/main/java/com/wunderit/projetcd/mongodriver/Driver.java
+/home/vagrant/Projet-CD-CI/src/main/java/com/wunderit/projetcd/MyMath.java
