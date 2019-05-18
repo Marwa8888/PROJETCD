@@ -90,8 +90,7 @@
                                <registryUrl>http://192.168.60.11:8081/repository/docker-host/</registryUrl>
                             </configuration>
                         </plugin>
-                   </plugins>
-			
+                  
 		</plugins>
 	</build>
 
