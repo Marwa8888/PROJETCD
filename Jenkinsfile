@@ -1,3 +1,5 @@
+
+
 pipeline {
     agent {
         label 'slave1'
@@ -35,13 +37,16 @@ pipeline {
          }
             
         }
-        stage ('Deployer sur nexus') {
-            steps {
-                sh 'mvn deploy -s settings.xml'
-            }
+        //stage ('SNAPSHOT') {
+         //  steps {
+         //       sh 'mvn deploy -s settings.xml'
+         //   }
+       // }
+        stage('RELEASE'){
+            steps{
+                sh 'mvn deploy  -s settings.xml'
+                }
         }
         
 }
 }
-
-
