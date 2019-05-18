@@ -96,7 +96,16 @@
                                      </resource>
                                    </resources>
                             </configuration>
-                        </plugin>
+		            <executions>
+                              <execution>
+                                 <id>docker-build</id>
+                                 <phase>package</phase>
+                                 <goals>
+                                   <goal>build</goal>
+                                 </goals>
+                              </execution>
+                            </executions>
+                         </plugin>
                         
                           
                   
