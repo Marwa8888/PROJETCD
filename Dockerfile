@@ -1,6 +1,6 @@
 FROM openjdk:13-jdk-alpine
 VOLUME /tmp
 ARG JAR_FILE
-COPY $/target/projetcd-1.1-SNAPSHOT.war app.war
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-war","/app.war"]
+ADD target/$projetcd-1.1-SNAPSHOT.war /usr/share/myservice/myservice.war
+ENTRYPOINT ["/usr/bin/java", "-jar", "/usr/share/myservice/myservice.war"]
 
