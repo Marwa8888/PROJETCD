@@ -12,8 +12,13 @@
       <id>releases</id>
       <username>admin</username>
       <password>admin123</password>
+   </server>   
+   <server>
+    <id>docker-nexus</id>
+    <username>admin</username>
+    <password>admin123</password>
    </server>
-</servers>
+  </servers>
       
 <mirrors>
     <mirror>
