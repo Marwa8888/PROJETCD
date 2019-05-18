@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.wunderit</groupId>
 	<artifactId>projetcd</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<name>projetcd</name>
 	<description>Application for CD Project</description>
 	<packaging>war</packaging>
