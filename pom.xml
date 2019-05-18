@@ -78,13 +78,13 @@
                            <artifactId>dockerfile-maven-plugin</artifactId>
                            <version>${dockerfile-maven-version}</version>
                            <executions>
-                             <execution>
-                              <id>default</id>
-                              <goals>
-                                <goal>build</goal>
-                                <goal>push</goal>
-                              </goals>
-                             </execution>
+                              <execution>
+                               <id>default</id>
+                                <goals>
+                                  <goal>build</goal>
+                                  <goal>push</goal>
+                                </goals>
+                              </execution>
                            </executions>
                            <configuration>
                               <repository>spotify/foobar</repository>
