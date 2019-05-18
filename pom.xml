@@ -80,32 +80,28 @@
 				<configuration>
 			             <autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
-      		         </plugin>
-			 <plugin>
-                            <groupId>com.spotify</groupId>
-                            <artifactId>docker-maven-plugin</artifactId>
-                            <version>1.13.1</version>
-                            <configuration>
-                                   <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                                   <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                                   <resources>
-                                     <resource>
-                                      <targetPath>/</targetPath>
-                                      <directory>${project.build.directory}</directory>
-                                      <include>${project.build.finalName}.war</include>
-                                     </resource>
-                                   </resources>
-                            </configuration>
-		            <executions>
-                              <execution>
-                                 <id>docker-build</id>
-                                 <phase>package</phase>
-                                 <goals>
-                                   <goal>build</goal>
-                                 </goals>
-                              </execution>
-                            </executions>
-                         </plugin>
+      		        </plugin>
+			<plugin>
+			  <groupId>com.spotify</groupId>
+			  <artifactId>dockerfile-maven-plugin</artifactId>
+			  <version>1.4.10</version>
+			  <executions>
+			    <execution>
+			      <id>default</id>
+			      <goals>
+			        <goal>build</goal>
+			        <goal>push</goal>
+			      </goals>
+			    </execution>
+			  </executions>
+			  <configuration>
+			    <repository>spotify/foobar</repository>
+			    <tag>${project.version}</tag>
+			    <buildArgs>
+			      <JAR_FILE>${project.build.finalName}.${project.packaging}</JAR_FILE>
+			    </buildArgs>
+			  </configuration>
+		      </plugin>
                         
                           
                   
