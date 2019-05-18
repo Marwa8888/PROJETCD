@@ -20,11 +20,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>12</java.version>
 	</properties>
-	<scm>
-		<connection>scm:git:git@https://github.com/Marwa8888/PROJETCD.git</connection>
-		<url>http://github.com/Marwa8888/PROJETCD</url>
-		<tag>HEAD</tag>
-  	</scm>
 
 	<dependencies>
 		<dependency>
